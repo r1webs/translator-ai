@@ -1,0 +1,171 @@
+body {
+  overflow: hidden;
+}
+
+.rajdhani-light {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.rajdhani-regular {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rajdhani-medium {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.rajdhani-semibold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.rajdhani-bold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.fix--height {
+  height: calc(100vh - 72px);
+}
+@keyframes fadeIn {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 100px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    bottom: 100px;
+    opacity: 1;
+  }
+  100% {
+    bottom: -100px;
+    opacity: 0;
+  }
+}
+
+.fade-in-anim {
+  bottom: 100px;
+  animation: fadeIn 1s;
+}
+.fade-out-anim {
+  bottom: -100px;
+  animation: fadeOut 1s;
+  opacity: 0
+}
+
+/* react-select-search customization */
+.select-search-container:not(.select-search-is-multiple) .select-search-select {
+  top: auto !important;
+  bottom: 58px !important;
+  border-width: 1px;
+}
+.select-search-select .select-search-option {
+  height: 36px;
+  color: #d1d5db;
+  font-size: 0.875rem;
+  background-color: #111827;
+}
+.select-search-select .select-search-is-highlighted, .select-search-option:not(.select-search-is-selected):hover {
+  background-color: #89b4fa !important;
+  color: #111827;
+}
+.select-search-container .select-search-input {
+  height: 40px;
+  border-radius: 0.5rem !important;
+  font-size: 0.875rem;
+  background-color: #111827;
+  border:solid 1px #4b5563;
+}
+.select-search-container .select-search-input, .select-search-container .select-search-input:focus {
+  border-width: 1px !important;
+  color: #d1d5db;
+}
+.select-search-container .select-search-select {
+  border-radius: 0.5rem !important;
+  background: #111827 !important;
+}
+input:hover, input:focus, .select-search-container .select-search-has-focus:focus {
+  outline: none !important;
+  border: solid 1px #89b4fa !important;
+}
+.ribbon_link {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 105px;
+  height: 105px;
+  text-decoration: none;
+  pointer-events: none;
+  transition: all .1s ease-in;
+  will-change: transform;
+}
+.ribbon_link::before {
+  top: 0;
+  left: 0;
+}
+.ribbon_link::before, .ribbon_link::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #505960;
+  transition: all .1s ease-in;
+}
+
+.ribbon_container {
+  position: relative;
+  top: 21px;
+  left: -11px;
+  z-index: 1;
+  display: block;
+  width: 160px;
+  padding: 9px 0 6px;
+  background-color: #505960;
+  color: #d1d5db;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transform: rotate(45deg);
+  pointer-events: auto;
+}
+.ribbon_link::after {
+  right: 0;
+  bottom: 0;
+}
+.ribbon_link::before, .ribbon_link::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #505960;
+}
+
+.ribbon_line1 {
+  margin-left: -7px;
+  color: #d1d5db;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+.ribbon_line2 {
+  margin-left: -7px;
+  color: #d1d5db;
+  font-size: 14px;
+}

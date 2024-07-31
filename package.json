@@ -1,0 +1,28 @@
+{
+  "name": "translator-ai",
+  "version": "1.0.0",
+  "description": "A learning project using langchain",
+  "main": "index.js",
+  "private":"true",
+  "workspaces":["translator-services", "translator-web-app"],
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "LLM",
+    "langchain",
+    "learn",
+    "LLM",
+    "openAI",
+    "GPT",
+    "NLP",
+    "AI"
+  ],
+  "author": "Arunraj Natarajan",
+  "license": "ISC",
+  "dependencies": {
+
+  }
+}
