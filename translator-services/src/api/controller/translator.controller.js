@@ -5,6 +5,7 @@ const langchainMessages = require('@langchain/core/messages');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const langchainParser = require('@langchain/core/output_parsers');
 const languagesList = require('../../static/languages-list.json');
+const { ollamaBaseUrl, ollamaModel } = require('../../config/vars');
 
 const { Ollama } = ollamaCore;
 const { SystemMessage, HumanMessage } = langchainMessages;
@@ -12,8 +13,8 @@ const { StringOutputParser } = langchainParser;
 const parser = new StringOutputParser();
 
 const model = new Ollama({
-  baseUrl: 'http://localhost:11434',
-  model: 'llama3.1:latest',
+  baseUrl: ollamaBaseUrl || 'http://localhost:11434',
+  model: ollamaModel || 'llama3:8b',
   lc_serializable: true,
   temperature: 1,
 });

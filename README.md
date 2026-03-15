@@ -4,9 +4,29 @@
   Integrated with Lllama 3.1 LLM by Ollama.
   Please note that, Llama 3.1 supports now English, French, German, Spanish, Portuguese, Italian, Hindi and Thai.
   
-  ## Get Started 🚀  
+  ## Get Started 🚀
+
+  ### Run with Docker (recommended)
+  - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+  - Copy the env files:
+    ```bash
+    cp .env.example .env
+    cp translator-services/.env.development translator-services/.env
+    ```
+  - Start all services:
+    ```bash
+    docker compose up --build
+    ```
+  - First run will take a few minutes — the model (~4.7GB) is downloaded automatically.
+  - Launch http://localhost:3000/translator
+
+  ### Run locally
   - Install the Ollama application to run llama 3 LLM locally.
   - Install the latest NodeJS
+  - Copy the env file:
+    ```bash
+    cp translator-services/.env.development translator-services/.env
+    ```
   - cd translator-services && npm run start
   - cd translator-web-app && npm run dev
   - Launch http://localhost:5173/translator
@@ -14,16 +34,15 @@
     export LANGCHAIN_TRACING_V2="true"
     export LANGCHAIN_API_KEY="<API_KEY>"
 
-  ## Model manangement
-  In case if you wish to change the llama model version, look at translator-services/src/controller/translator.controller.js and update `model`
+  ## Model management
+  To change the model, update `OLLAMA_MODEL` in your `.env` files:
 
   ```
-    const model = new Ollama({
-      baseUrl: 'http://localhost:11434',
-      model: 'llama3.1:latest',
-      lc_serializable: true,
-      temperature: 1,
-    });
+  # translator-services/.env
+  OLLAMA_MODEL=llama3:8b
+
+  # .env (root, used by docker-compose)
+  OLLAMA_MODEL=llama3:8b
   ```
   
   ## Ollama references 🔥  

@@ -1,0 +1,8 @@
+  node_modules
+  translator-services/node_modules
+  translator-web-app/node_modules
+  translator-web-app/dist
+  translator-services/.env
+  translator-services/combined.log
+  translator-services/error.log
+  .git

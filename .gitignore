@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 combined.log
 error.log
+
+translator-services/.env
